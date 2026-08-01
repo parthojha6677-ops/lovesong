@@ -1,0 +1,676 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    background:#fff9f4;
+}
+
+
+button{
+    padding:16px 38px;
+    border:none;
+    border-radius:40px;
+    background:#f6c453;
+    cursor:pointer;
+    font-size:18px;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-4px);
+}
+
+
+/* INTRO */
+
+.intro{
+    position:fixed;
+    inset:0;
+    background:#111;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:10;
+    transition:.8s;
+}
+
+.content{
+    width:90%;
+    max-width:750px;
+    text-align:center;
+}
+
+.content h1{
+    font-family:'Playfair Display',serif;
+    font-size:64px;
+}
+
+.content p{
+    font-size:22px;
+    line-height:1.8;
+    color:#ddd;
+    margin:18px 0;
+}
+
+.content strong{
+    color:#ffd86f;
+}
+
+
+.hidden{
+    display:none;
+}
+
+
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    background:#fff9f4;
+}
+
+.background{
+    position:absolute;
+    inset:0;
+}
+
+.blob{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(80px);
+    opacity:.5;
+    animation:float 12s infinite alternate;
+}
+
+.blob1{
+    width:320px;
+    height:320px;
+    background:#ffd86f;
+    left:-100px;
+    top:-100px;
+}
+
+.blob2{
+    width:350px;
+    height:350px;
+    background:#ffc9c9;
+    right:-100px;
+    bottom:-100px;
+}
+
+.blob3{
+    width:250px;
+    height:250px;
+    background:#fff2a6;
+    left:60%;
+    top:40%;
+}
+
+
+.glass-card{
+    width:90%;
+    max-width:720px;
+    padding:60px;
+    text-align:center;
+    background:rgba(255,255,255,.6);
+    backdrop-filter:blur(18px);
+    border-radius:32px;
+}
+
+.flower{
+    font-size:60px;
+}
+
+.glass-card h2{
+    font-family:'Playfair Display',serif;
+    font-size:58px;
+}
+
+
+
+/* STORY */
+
+.story{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#fff5ee,#ffe3e3);
+}
+
+
+.story-card{
+    width:90%;
+    max-width:700px;
+    background:white;
+    padding:55px;
+    border-radius:30px;
+    text-align:center;
+}
+
+
+.story-card h2{
+    font-family:'Playfair Display',serif;
+    font-size:52px;
+}
+
+
+.story-card p{
+    font-size:20px;
+    line-height:1.8;
+    color:#555;
+    margin:15px;
+}
+
+
+.date{
+    color:#d89b2b!important;
+}
+
+
+
+
+/* WHY YOU */
+
+.why-you{
+    height:100vh;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    background:#080808;
+    color:white;
+}
+
+
+.why-card{
+    width:90%;
+    max-width:750px;
+    text-align:center;
+}
+
+
+.why-card h2{
+    font-family:'Playfair Display',serif;
+    font-size:55px;
+    color:#ffd86f;
+}
+
+
+.why-card p{
+    font-size:21px;
+    line-height:1.8;
+    margin:20px;
+}
+
+
+.highlight{
+    color:#ffd86f;
+}
+
+
+
+/* MEMORIES */
+
+.memories{
+    min-height:100vh;
+    display:none;
+    justify-content:center;
+    align-items:flex-start;
+    padding:40px 20px;
+    background:linear-gradient(135deg,#111,#2a1b15);
+    color:white;
+    overflow-y:auto;
+}
+
+
+.memory-card{
+    width:95%;
+    max-width:1100px;
+    text-align:center;
+}
+
+
+.memory-card h2{
+    font-family:'Playfair Display',serif;
+    font-size:45px;
+    color:#ffd86f;
+}
+
+
+.memory-intro{
+    font-size:20px;
+    line-height:1.8;
+    margin:20px;
+}
+
+
+
+/* PHOTO GRID */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+    margin-top:30px;
+
+}
+
+
+
+.photo-card{
+
+    width:100%;
+
+    background:white;
+
+    padding:15px;
+
+    border-radius:25px;
+
+    color:#333;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+}
+
+
+
+.photo-card img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    border-radius:20px;
+
+}
+
+
+.photo-card h3{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:25px;
+
+    color:#c48b20;
+
+    margin-top:15px;
+
+}
+
+
+.photo-card p{
+
+    line-height:1.6;
+
+    margin-top:10px;
+
+}
+
+
+#letterBtn{
+
+    margin:50px auto;
+
+    display:block;
+
+}
+
+
+
+/* LETTER */
+
+.letter{
+
+    min-height:100vh;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px 20px;
+
+    background:linear-gradient(135deg,#1a0f0f,#000);
+
+    color:white;
+
+}
+
+
+.letter-card{
+
+    width:90%;
+
+    max-width:750px;
+
+    background:rgba(255,255,255,.08);
+
+    padding:50px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+}
+
+
+.letter-card h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:55px;
+
+    color:#ffd86f;
+
+}
+
+
+.letter-card p{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    margin:20px;
+
+}
+
+
+.letter-card h3{
+
+    margin-top:40px;
+
+    font-size:32px;
+
+    color:#ffd86f;
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.gallery{
+
+    grid-template-columns:1fr;
+
+}
+
+.memory-card h2{
+
+    font-size:38px;
+
+}
+
+.photo-card img{
+
+    height:240px;
+
+}
+
+}
+
+
+
+/* ANIMATION */
+
+@keyframes float{
+
+from{
+    transform:translate(0,0);
+}
+
+to{
+    transform:translate(70px,-50px);
+}
+
+}
+@media (max-width:600px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+
+    /* INTRO */
+
+    .content{
+        width:90%;
+    }
+
+    .content h1{
+        font-size:42px;
+    }
+
+    .content p{
+        font-size:17px;
+        line-height:1.6;
+    }
+
+
+    /* BUTTONS */
+
+    button{
+        padding:14px 28px;
+        font-size:16px;
+    }
+
+
+    /* HERO */
+
+    .glass-card{
+
+        width:92%;
+
+        padding:35px 20px;
+
+        border-radius:25px;
+
+    }
+
+
+    .flower{
+        font-size:45px;
+    }
+
+
+    .glass-card h2{
+
+        font-size:40px;
+
+    }
+
+
+    .subtitle,
+    .message{
+
+        font-size:16px;
+
+    }
+
+
+
+    /* STORY */
+
+    .story-card{
+
+        width:90%;
+
+        padding:30px 20px;
+
+    }
+
+
+    .story-card h2{
+
+        font-size:38px;
+
+    }
+
+
+    .story-card p{
+
+        font-size:16px;
+
+        margin:12px;
+
+    }
+
+
+
+    /* WHY YOU */
+
+    .why-card{
+
+        width:90%;
+
+    }
+
+
+    .why-card h2{
+
+        font-size:38px;
+
+    }
+
+
+    .why-card p{
+
+        font-size:17px;
+
+        margin:15px;
+
+    }
+
+
+
+    /* MEMORIES */
+
+    .memory-card{
+
+        width:100%;
+
+    }
+
+
+    .memory-card h2{
+
+        font-size:36px;
+
+    }
+
+
+    .memory-intro{
+
+        font-size:16px;
+
+    }
+
+
+    .gallery{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+
+    .photo-card{
+
+        width:100%;
+
+    }
+
+
+    .photo-card img{
+
+        height:280px;
+
+    }
+
+
+    .photo-card h3{
+
+        font-size:23px;
+
+    }
+
+
+    .photo-card p{
+
+        font-size:15px;
+
+    }
+
+
+
+    /* LETTER */
+
+    .letter-card{
+
+        width:92%;
+
+        padding:30px 20px;
+
+    }
+
+
+    .letter-card h2{
+
+        font-size:38px;
+
+    }
+
+
+    .letter-card p{
+
+        font-size:17px;
+
+        line-height:1.7;
+
+    }
+
+
+    .letter-card h3{
+
+        font-size:25px;
+
+    }
+
+
+    .music-controls{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+
+}
